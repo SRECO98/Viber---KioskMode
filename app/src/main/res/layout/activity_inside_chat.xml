@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inside_chat.InsideChatActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/insChatActConstLayoutTopContainer"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/inside_chat_act_top_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/insChatActButtonBack"
+            android:contentDescription="@string/inschatactbuttonback"
+            android:background="@drawable/inside_chat_act_back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/insChatActTextViewTitleOfChat"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/petar_filipovic"
+            android:textSize="20sp"
+            android:textScaleX="1.1"
+            android:textColor="@color/black"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/insChatActButtonBack"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/insChatActTextViewLastSeen"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/last_seen_today_at_11_03_am"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/insChatActButtonBack"
+            app:layout_constraintTop_toBottomOf="@+id/insChatActTextViewTitleOfChat"
+            tools:ignore="TextSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/insChatActConstLayoutBottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/inside_chat_act_bottom_bg"
+        app:layout_constraintBottom_toTopOf="@+id/insideChatActConstLayoutOptionsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/insChatActButtonMessageOptions"
+            android:contentDescription="@string/inschatactbuttonmessageoptions"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/add_image_or_cords_to_message"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/insideChatActEditTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/inside_chat_act_edittext_message_bg"
+            android:hint="@string/message"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColorHint="#737272"
+            android:textScaleX="1.1"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/insChatActCardViewSendMessage"
+            app:layout_constraintStart_toEndOf="@+id/insChatActButtonMessageOptions"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/insChatActCardViewSendMessage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/inside_chat_act_send_arrow_bg"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/insChatActButtonSendMessage"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:paddingStart="4dp"
+                android:background="@drawable/inside_chat_act_send_arrow"
+                android:contentDescription="@string/inschatactbuttonsendmessage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/insideChatActConstLayoutOptionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/insideChatActImageViewMakeAPicture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/inside_chat_make_a_picture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/insideChatActImageViewSendLocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/inside_chat_add_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/insideChatActImageViewMakeAPicture"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/insideChatActRecyclerViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/insChatActConstLayoutBottomContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insChatActConstLayoutTopContainer" />
+
+    <ImageView
+        android:id="@+id/testing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/insChatActConstLayoutBottomContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insChatActConstLayoutTopContainer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/insChatActConstLayoutBackgroundForImage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/insChatActImageViewZoomedPicture"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/insChatActConstLayoutInternetConnectContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ED000000"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/insChatActRotatingCircle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/internet_conn_circle"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/insChatActNoInternetMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/insChatActRotatingCircle"
+            android:layout_marginTop="12dp"
+            android:text="No internet connection"
+            android:textColor="#5E5E5E"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/insChatActRotatingCircle" />
+
+        <!-- Add other UI elements as needed -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

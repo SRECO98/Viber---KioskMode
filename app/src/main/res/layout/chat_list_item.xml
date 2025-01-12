@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/chatActConstLayoutContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="76dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chatActCardViewProfilePicture"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chatActImageViewProfilePicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_user_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/chatActTextViewNameOfUser"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textStyle="bold"
+        android:text="Sreten Banovic"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/chatActTextViewTimeOfLastMessage"
+        app:layout_constraintStart_toEndOf="@+id/chatActCardViewProfilePicture"
+        app:layout_constraintTop_toTopOf="@+id/chatActCardViewProfilePicture" />
+
+    <TextView
+        android:id="@+id/chatActTextViewLastMessage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Ovo je tekst da testiram kako izgleda ovaj TextView."
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatActCardViewProfilePicture"
+        app:layout_constraintEnd_toEndOf="@+id/chatActTextViewNameOfUser"
+        app:layout_constraintStart_toEndOf="@+id/chatActCardViewProfilePicture"
+        app:layout_constraintTop_toBottomOf="@+id/chatActTextViewNameOfUser" />
+
+    <TextView
+        android:id="@+id/chatActTextViewTimeOfLastMessage"
+        android:layout_width="64dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:paddingTop="2dp"
+        android:text="52:55 PM"
+        android:textColor="#7A038B"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chatActCardViewProfilePicture" />
+
+
+    <TextView
+        android:id="@+id/chatActTextViewNumberOfMessages"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_profile_picture"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="11"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/chatActTextViewTimeOfLastMessage"
+        app:layout_constraintTop_toBottomOf="@+id/chatActTextViewTimeOfLastMessage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

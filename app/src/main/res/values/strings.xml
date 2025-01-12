@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">kioskappplogikaa</string>
+    <string name="inschatactbuttonback">insChatActButtonBack</string>
+    <string name="petar_filipovic">Petar Filipovic</string>
+    <string name="last_seen_today_at_11_03_am">Last seen today at 11:03 AM</string>
+    <string name="inschatactbuttonmessageoptions">insChatActButtonMessageOptions</string>
+    <string name="message">Message...</string>
+    <string name="inschatactbuttonsendmessage">insChatActButtonSendMessage</string>
+
+    <string name="aadmin_description">Your should allow my application to lock the screen.</string>
+    <string name="not_device_owner">You are not device owner</string>
+    <string name="device_owner">You are admin!</string>
+    <string name="stop_lock_task">Stop lock task</string>
+    <string name="start_lock_task">Start lock task</string>
+    <string name="install">Install application</string>
+    <string name="open_installed_app">Open installed app</string>
+</resources>

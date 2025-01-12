@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- White background -->
+    <item android:drawable="@color/purple" />
+
+    <!-- Gray line at the bottom -->
+    <item
+        android:top="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+
+</layer-list>
